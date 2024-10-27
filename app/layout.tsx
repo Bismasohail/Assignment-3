@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import HeaderTop from "./components/HeaderTop";
+import HeaderMain from "./components/HeaderMain";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import { BsFillSignDoNotEnterFill } from "react-icons/bs";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +33,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HeaderTop/>
+        <HeaderMain/>
+        <NavBar/>
+        
         {children}
+        <Footer/>
       </body>
     </html>
   );
